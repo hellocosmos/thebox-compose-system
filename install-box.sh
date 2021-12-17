@@ -24,7 +24,7 @@ check_dependencies git
 
 echo "Cloning to current working directory from github..."
 git init
-git remote add origin https://github.com/lncm/thebox-compose-system.git
+git remote add origin https://github.com/hellocosmos/thebox-compose-system.git
 git fetch
 git reset origin/master
 git checkout -t origin/master
