@@ -64,26 +64,7 @@ services:
                 networks:
                     net:
                         ipv4_address: 10.254.2.4
-        neutrino-switcher:
-                image: "lncm/neutrino-switcher:1.0.4"
-                user: 1000:1000
-                environment:
-                        HOME: /data
-                container_name: neutrino-switcher
-                depends_on: [ lnd, bitcoin ]
-                restart: always
-                volumes:
-                    - "${PWD}/lnd:/lnd"
-                    - "${PWD}/secrets:/secrets"
-                    - "${PWD}/statuses:/statuses"
-                    - "/var/run/docker.sock:/var/run/docker.sock"
-                environment:
-                    JSONRPCURL: http://10.254.2.2:8332
-                    LND_CONTAINER_NAME: lnd
-                    SLEEPTIME: 43200
-                networks:
-                    net:
-                        ipv4_address: 10.254.2.6
+
         tor:
                 image: "lncm/tor:0.4.6.7@sha256:472c8d1265679e7cfd641edcbc44ec2fa0e500f6929bd8dc1f4811feffcfefaa"
                 container_name: tor
