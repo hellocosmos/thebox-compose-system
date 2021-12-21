@@ -26,7 +26,7 @@ if [ ! $(uname -s) == "Linux" ]; then
   echo "Sorry, only linux systems are supported at this time (you may work around this but you are on your own there)"
   exit 1
 fi
-TORVERSION=0.4.4.5
+TORVERSION=0.4.6.7
 
 echo "Start box configuration"
 echo "Installing RPCAuth.py and configuring secrets"
